@@ -1,4 +1,7 @@
-# :rocket: Desafio 01 - Conceitos do React
+<div align="center">
+  <img src="../.github/cover-reactjs.png" />
+  <h1>:rocket: Desafio 01 - Conceitos do React</h1>
+</div>
 
 ## 💻 Sobre o desafio
 
@@ -14,8 +17,6 @@ Essa será uma aplicação onde o seu principal objetivo é uma pequena aplic
 
 A seguir veremos com mais detalhes o que e como precisa ser feito 🚀
 
-<br/>
-
 ### Template da aplicação
 
 Para te ajudar nesse desafio, criamos para você esse modelo que você deve utilizar como um template do GitHub.
@@ -26,15 +27,11 @@ O template está disponível na seguinte URL:
 
 **Dica**: Caso não saiba utilizar repositórios do GitHub como template, temos um guia em **[nosso FAQ](https://www.notion.so/FAQ-Desafios-ddd8fcdf2339436a816a0d9e45767664).**
 
-<br/>
-
 ### O que devo editar na aplicação?
 
 Com o template já clonado, as depêndencias instaladas, você deve completar onde não possui código com o código para atingir os objetivos de cada teste. Nesse desafio, você deve editar apenas o seguinte arquivo para completar as funcionalidades da aplicação:
 
 - [src/components/TaskList.tsx;](https://github.com/rocketseat-education/ignite-template-reactjs-conceitos-do-react/blob/main/src/components/TaskList.tsx)
-
-<br/>
 
 **components/TaskList.tsx**
 
@@ -47,8 +44,6 @@ Você deve criar as funcionalidades para as três funções presentes nesse arqu
 - **handleToggleTaskCompletion:** Deve alterar o status de `isComplete` para uma task com um ID específico que é recebido por parâmetro.
 - **handleRemoveTask:** Deve receber um ID por parâmetro e remover a task que contém esse ID do estado.
 
-<br/>
-
 ### Especificação dos testes
 
 Em cada teste, tem uma breve descrição no que sua aplicação deve cumprir para que o teste passe.
@@ -56,8 +51,6 @@ Em cada teste, tem uma breve descrição no que sua aplicação deve�
 Caso você tenha dúvidas quanto ao que são os testes, e como interpretá-los, dê uma olhada em **[nosso FAQ](https://www.notion.so/FAQ-Desafios-ddd8fcdf2339436a816a0d9e45767664)**
 
 Para esse desafio, temos os seguintes testes:
-
-<br/>
 
 #### Teste TaskList.spec.tsx
 
@@ -85,13 +78,9 @@ Para que esse teste passe, você deve permitir que ao clicar no botão com ícon
 
 Para que esse teste passe, você deve permitir que ao clicar no checkbox ao lado da task, ela seja marcada como concluída ou não concluída de acordo com seu estado atual, alterando seu valor de `isComplete` de `false` para `true` ou ao contrário, de `true` para `false`. 
 
-<br/>
-
 ## 📅 Entrega
 
 Esse desafio deve ser entregue a partir da plataforma da Rocketseat. Envie o link do repositório que você fez suas alterações. Após concluir o desafio, além de ter mandado o código para o GitHub, fazer um post no Linkedin é uma boa forma de demonstrar seus conhecimentos e esforços para evoluir na sua carreira para oportunidades futuras.
-
-<br/>
 
 ## Solução do desafio
 
