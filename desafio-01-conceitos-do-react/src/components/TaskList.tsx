@@ -13,7 +13,7 @@ interface Task {
 export function TaskList() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
-  const [error, setError] = useState('a');
+  const [error, setError] = useState('');
 
   function handleCreateNewTask() {
     if (!newTaskTitle) {
@@ -26,6 +26,7 @@ export function TaskList() {
       title: newTaskTitle,
       isComplete: false
     };
+
     setTasks(previousState => [...previousState, newTask]);
     setNewTaskTitle('');
     setError('');
@@ -33,9 +34,10 @@ export function TaskList() {
 
   function handleToggleTaskCompletion(id: number) {
     const newTasks = tasks.map(task => 
-      task.id === id ? { ...task, isCompleted: false } : task
+      task.id === id ? { ...task, isComplete: !task.isComplete } : task
     );
-    setTasks(newTasks);
+
+    setTasks(newTasks)
   }
 
   function handleRemoveTask(id: number) {
