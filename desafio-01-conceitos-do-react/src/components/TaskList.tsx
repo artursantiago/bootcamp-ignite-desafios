@@ -13,9 +13,13 @@ interface Task {
 export function TaskList() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
+  const [error, setError] = useState('a');
 
   function handleCreateNewTask() {
-    if (!newTaskTitle) return;
+    if (!newTaskTitle) {
+      setError('Adicione um título para sua task');
+      return;
+    }
 
     const newTask: Task = {
       id: Math.random(),
@@ -24,6 +28,7 @@ export function TaskList() {
     };
     setTasks(previousState => [...previousState, newTask]);
     setNewTaskTitle('');
+    setError('');
   }
 
   function handleToggleTaskCompletion(id: number) {
@@ -44,15 +49,19 @@ export function TaskList() {
         <h2>Minhas tasks</h2>
 
         <div className="input-group">
-          <input 
-            type="text" 
-            placeholder="Adicionar novo todo" 
-            onChange={(e) => setNewTaskTitle(e.target.value)}
-            value={newTaskTitle}
-          />
-          <button type="submit" data-testid="add-task-button" onClick={handleCreateNewTask}>
-            <FiCheckSquare size={16} color="#fff"/>
-          </button>
+          <div className="input-group-control">
+            <input 
+              type="text" 
+              className={error && 'error'}
+              placeholder="Adicionar novo todo" 
+              onChange={(e) => setNewTaskTitle(e.target.value)}
+              value={newTaskTitle}
+            />
+            <button type="submit" data-testid="add-task-button" onClick={handleCreateNewTask}>
+              <FiCheckSquare size={16} color="#fff"/>
+            </button>
+          </div>
+          { error && <span className="input-group-error">{error}</span>}
         </div>
       </header>
 
